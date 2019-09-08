@@ -2,5 +2,5 @@
 The project for CSCE 3444 for Group X
 
 Project Members:
-Tristan White
-Jonathan Kleehammer
+* Tristan White
+* Jonathan Kleehammer
