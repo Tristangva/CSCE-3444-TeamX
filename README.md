@@ -5,3 +5,4 @@ Project Members:
 * Tristan White
 * Jonathan Kleehammer
 * Ashley Torres
+* Matthewit Dechatech
