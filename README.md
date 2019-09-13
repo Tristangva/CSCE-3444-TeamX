@@ -6,3 +6,10 @@ Project Members:
 * Jonathan Kleehammer
 * Ashley Torres
 * Matthewit Dechatech
+
+
+Start the server with command:
+
+`python3 manage.py startapp`
+
+Click on the ip address displayed bellow
