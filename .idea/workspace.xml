@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccb9d633-3f0b-485b-aab4-40396a215cec" name="Default" comment="Messing around so kind of a lot in this commit.&#10;&#10;Added settings to allow for React to take control of the frontend in Bus_Tracker/settings.py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bus_Tracker/Bus_Tracker/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_Tracker/Bus_Tracker/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bus_Tracker/Bus_Tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_Tracker/Bus_Tracker/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bus_Tracker/mapviewer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_Tracker/mapviewer/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,11 +121,6 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Django_Test - 2019.09.13 at 11h 06m 54s.xml">
-      <configuration name="Django Test" configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
