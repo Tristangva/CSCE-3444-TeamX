@@ -5,6 +5,7 @@ class Bus(models.Model):
     id = models.CharField(primary_key=True, max_length=30)  # key
     route = models.CharField(max_length=30)
     capacity = models.IntegerField()
+    status = models.CharField(max_length=30, default='In service')  # maintenance status
 
 # Class for the routes
 class Routes(models.Model):
