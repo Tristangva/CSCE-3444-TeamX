@@ -12,4 +12,8 @@ Start the server with command:
 
 `python3 manage.py runserver`
 
+If this command doesn't work, run:
+
+`python manage.py runserver`
+
 Click on the ip address displayed below
