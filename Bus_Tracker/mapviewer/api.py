@@ -1,11 +1,13 @@
 from .models import Bus, Routes
 from rest_framework import viewsets, permissions
-from .serializer import busSerializer
+from .serializer import BusSerializer
 
 #lead viewsets
-class busViewsets(viewsets.ModelViewSet):
+
+
+class BusViewSets(viewsets.ModelViewSet):
     queryset = Bus.objects.all()
     permission_classes = [
         permissions.AllowAny
     ]
-    serializer_class = busSerializer
+    serializer_class = BusSerializer
