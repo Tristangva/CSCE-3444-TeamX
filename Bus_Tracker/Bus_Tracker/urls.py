@@ -19,8 +19,8 @@ from django.views.generic import RedirectView
 
 
 urlpatterns = [
-
-    path('', include('mapviewer.urls')),
+    path('', include('frontend.urls')),
+    # path('', include('mapviewer.urls')),
     path('admin/', admin.site.urls),
 
 ]
