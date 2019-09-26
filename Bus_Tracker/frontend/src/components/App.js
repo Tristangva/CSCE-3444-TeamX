@@ -8,7 +8,8 @@ import TestButton from "./TestButton.js"
 const App = () => (
     <div>
         <h1> Hello World </h1>
-        {/*<TestButton/>*/}
+        <TestButton/>
+        {/*<button className="button is-primary is-large">Test Button</button>*/}
         <section className="hero is-dark">
             <div className="hero-body">
                 <div className="container">

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class TestButton extends Component {
   render() {
-      <div>
+      return(
           <button className="button is-primary is-large">Test Button</button>
-      </div>
+      )
   }
 }
 
