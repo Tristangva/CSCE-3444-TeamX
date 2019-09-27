@@ -15,6 +15,9 @@ Modules to install
 * Markdown
 * React
 * googlemaps
+* geos
+* PostGIS
+* 
 
 Start the server with command:
 
