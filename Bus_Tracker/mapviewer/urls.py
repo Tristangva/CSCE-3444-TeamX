@@ -1,17 +1,17 @@
 from django.urls import path
 from rest_framework import routers
-from .api import busViewsets
+from .api import BusViewSets
 from . import views
 
 
 routers = routers.DefaultRouter()
-routers.register('api.Bus', busViewsets, 'Bus')
+routers.register('api.Bus', BusViewSets, 'Bus')
 
 urlpatterns = routers.urls
 
-"""urlpatterns = [
+urlpatterns += [
     path('', views.index, name='index'),
-]"""
+]
   #homepage
 
   #map view
