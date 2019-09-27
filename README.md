@@ -7,6 +7,14 @@ Project Members:
 * Ashley Torres
 * Matthewit Dechatech
 
+To run, ensure git and Python3.7+ is installed.
+
+Modules to install
+* Django
+* djangorestframework
+* Markdown
+* React
+* googlemaps
 
 Start the server with command:
 
