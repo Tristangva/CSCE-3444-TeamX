@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # frontend apps
     'rest_framework',
+    'frontend',  # enable the frontend app
 
     # the main app
     'mapviewer',
