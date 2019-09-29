@@ -7,10 +7,11 @@ import './App.css';
 
 
 const App = () => (
-    <div>
-        <h1> Hello World </h1>
+    <div className="is-warning">
+        <div>
+            <h1> Hello World </h1>
+        </div>
         <TestButton/>
-        {/*<button className="button is-primary is-large">Test Button</button>*/}
         <section className="hero is-dark">
             <div className="hero-body">
                 <div className="container">
@@ -23,7 +24,12 @@ const App = () => (
                 </div>
             </div>
         </section>
+        <section className="hero is-link is-fullheight is-fullwidth">
+            <div className="hero-body is-danger has-text-centered">
+                <h1>Test</h1>
+            </div>
+        </section>
     </div>
 );
 const wrapper = document.getElementById("app");
-wrapper ? ReactDOM.render(<App />, wrapper) : null;
+wrapper ? ReactDOM.render(<App/>, wrapper) : null;
