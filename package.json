@@ -4,7 +4,8 @@
   "description": "The project for CSCE 3444 for Group X",
   "main": "index.js",
   "dependencies": {
-    "bulma": "^0.7.5"
+    "bulma": "^0.7.5",
+    "reactbulma": "^3.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
