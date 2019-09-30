@@ -1,5 +1,9 @@
 body {
-    background: beige;
+    background: lightgray;
+
+    text-align: center;
+    font-family: Geneva, Roboto, Arial, Verdana;
+    color: white;
 }
 
 button {
@@ -21,16 +25,18 @@ button:active {
     text-align: center;
     vertical-align: middle;
 
-    font-size: large;
+    font-size: 25px;
 
     width: 75px;
     height: 75px;
     border-radius: 100%;
+
+    border: white solid 3px;
 }
 
 #RoutesButton {
     position: absolute;
-    left: 250px;
+    left: 275px;
     top: 20px;
 }
 
@@ -38,17 +44,19 @@ button:active {
     z-index: 100 !important;
     position: fixed;
     /*Margin Left is the width of the div + width of outline*/
-    margin-left: -255px;
+    margin-left: -253px;
     transition: margin-left 0.5s;
+
+    top: 0;
+    left: 0;
+
     height:100vh;
     width: 250px;
 
-    background-color: lightgray;
-    outline: 5px solid green;
-
-    color: black;
+    background-color: green;
+    outline: 3px solid white;
 }
 
-.RoutesMenu.slideout {
+#Sidebar-and-Button.slideout {
   margin-left: 0px;
 }

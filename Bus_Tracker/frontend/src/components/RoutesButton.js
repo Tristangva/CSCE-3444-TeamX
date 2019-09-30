@@ -4,18 +4,15 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 class RoutesButton extends React.Component {
     handleClick() {
-        const menu = document.getElementById("RoutesMenu");
+        const menu = document.getElementById("Sidebar-and-Button");
         menu.classList.toggle('slideout')
     }
   render() {
     return (
-        <div className="RoutesButton">
-          <button   className="button circle-button"
-                    onClick={() => this.handleClick()}>
-              <FontAwesomeIcon icon={faBars} />
-          </button>
-
-        </div>
+      <button id="RoutesButton" className="RoundButton"
+                onClick={() => this.handleClick()}>
+          <FontAwesomeIcon icon={faBars} />
+      </button>
     );
   }
 }
