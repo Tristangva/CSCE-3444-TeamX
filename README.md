@@ -28,3 +28,10 @@ If this command doesn't work, run:
 `python manage.py runserver`
 
 Click on the ip address displayed below
+
+
+admin info:
+
+user name: admin
+user email: admin@admin.com
+password: groupx
