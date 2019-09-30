@@ -30,6 +30,25 @@ button:active {
 
 #RoutesButton {
     position: absolute;
-    left: 20px;
+    left: 250px;
     top: 20px;
+}
+
+#Sidebar-and-Button {
+    z-index: 100 !important;
+    position: fixed;
+    /*Margin Left is the width of the div + width of outline*/
+    margin-left: -255px;
+    transition: margin-left 0.5s;
+    height:100vh;
+    width: 250px;
+
+    background-color: lightgray;
+    outline: 5px solid green;
+
+    color: black;
+}
+
+.RoutesMenu.slideout {
+  margin-left: 0px;
 }

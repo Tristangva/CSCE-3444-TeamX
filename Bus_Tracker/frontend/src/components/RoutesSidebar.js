@@ -1,11 +1,14 @@
 import React from 'react';
+import RoutesButton from "./RoutesButton"
 
 class RoutesSidebar extends React.Component {
     render(){
         return (
-            <button id="RoutesButton" className="RoundButton">Test</button>
-            <div id="RoutesSidebar">
-                <h3>List Of Routes</h3>
+            <div id="Sidebar-and-Button">
+                <div id="RoutesSidebar">
+                    <button id="RoutesButton" className="RoundButton">Test</button>
+                    <h3>List Of Routes</h3>
+                </div>
             </div>
         );
     }
