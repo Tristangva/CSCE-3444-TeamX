@@ -94,7 +94,9 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME' : 'mapviewer',
         'USER' : 'postgres',
-
+        'PASSWORD' : 'groupx',
+        'HOST' : 'localhost',
+        'PORT' : '5432',
     }
 }
 
