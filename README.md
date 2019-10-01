@@ -33,5 +33,23 @@ Click on the ip address displayed below
 admin info:
 
 user name: admin
+
 user email: admin@admin.com
+
 password: groupx
+
+
+
+PostgreSQL server info:
+
+'ENGINE': 'django.contrib.gis.db.backends.postgis',
+
+'NAME' : 'mapviewer',
+ 
+'USER' : 'postgres',
+ 
+'PASSWORD' : 'groupx',
+        
+'HOST' : 'localhost',
+        
+'PORT' : '5432',
