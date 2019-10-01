@@ -37,10 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis', #needed for gis
 
     # frontend apps
-    'rest_framework',
-    'frontend',  # enable the frontend app
 
     # the main app
     'mapviewer',
@@ -89,8 +88,13 @@ WSGI_APPLICATION = 'Bus_Tracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #old db keeping just in case
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME' : 'mapviewer',
+        'USER' : 'postgres',
+
     }
 }
 

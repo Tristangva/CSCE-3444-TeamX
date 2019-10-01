@@ -1,5 +1,7 @@
 from django.db import models
 
+# Map module?
+
 # class for bus
 class Bus(models.Model):
     id = models.CharField(primary_key=True, max_length=30)  # key
@@ -14,3 +16,4 @@ class Routes(models.Model):
     color = models.CharField(max_length=30)  # color
     # Days of week
     # time array
+    # stops on route
