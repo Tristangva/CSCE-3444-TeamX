@@ -1,9 +1,15 @@
 from django.contrib.gis.db import models
+from django.contrib.gis.geos import Point
+
 
 # Map module
 class map(models.Model):
     city = models.CharField(max_length=50, default='Denton, Tx') #city name
     location = models.PointField()
+
+
+# Comment this out after you make a map. Will fix later
+map.objects.create(location=Point(-97.133103, 33.215079))
 
     # class for bus
 class Bus(models.Model):
