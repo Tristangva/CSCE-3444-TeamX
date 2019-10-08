@@ -9,7 +9,7 @@ class map(models.Model):
 
 
 # Comment this out after you make a map. Will fix later
-map.objects.create(location=Point(-97.133103, 33.215079))
+#map.objects.create(location=Point(-97.133103, 33.215079))
 
     # class for bus
 class Bus(models.Model):
