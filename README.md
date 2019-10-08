@@ -7,6 +7,17 @@ Project Members:
 * Ashley Torres
 * Matthewit Dechatech
 
+To run, ensure git and Python3.7+ is installed.
+
+Modules to install
+* Django
+* djangorestframework
+* Markdown
+* React
+* googlemaps
+* geos
+* PostGIS
+* 
 
 Start the server with command:
 
@@ -17,3 +28,28 @@ If this command doesn't work, run:
 `python manage.py runserver`
 
 Click on the ip address displayed below
+
+
+admin info:
+
+user name: admin
+
+user email: admin@admin.com
+
+password: groupx
+
+
+
+PostgreSQL server info:
+
+'ENGINE': 'django.contrib.gis.db.backends.postgis',
+
+'NAME' : 'mapviewer',
+ 
+'USER' : 'postgres',
+ 
+'PASSWORD' : 'groupx',
+        
+'HOST' : 'localhost',
+        
+'PORT' : '5432',
