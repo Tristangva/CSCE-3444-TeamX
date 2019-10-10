@@ -4,7 +4,11 @@
   "description": "The project for CSCE 3444 for Group X",
   "main": "index.js",
   "dependencies": {
-    "bulma": "^0.7.5"
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.5",
+    "bulma": "^0.7.5",
+    "reactbulma": "^3.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

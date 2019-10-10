@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.gis', #needed for gis
 
     # frontend apps
+    'frontend',
+
+    'rest_framework',
 
     # the main app
     'mapviewer',
