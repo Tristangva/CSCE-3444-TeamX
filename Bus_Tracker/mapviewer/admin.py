@@ -11,9 +11,5 @@ class mapAdmin(OSMGeoAdmin):
 
     list_display = ('city', 'location')
 
-    """default_lon = 33.215079
-    default_lat = -97.133103
-    default_zoom = 15
-    readonly_fields = ('Latitude', 'Longitude')"""
 
 admin.site.register(map, mapAdmin)
