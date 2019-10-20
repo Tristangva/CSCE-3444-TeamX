@@ -6,10 +6,10 @@ from .models import Bus, Routes, map
 class BusSerializer(serializers.ModelSerializer):
     class meta:
         model = Bus
-        fields = ('city', 'location')  # all fields in Map model
+        fields = '__all__'  # all fields
 
 
 class MapSerializer(serializers.ModelSerializer):
         class meta:
             model = map
-            fields = '__all__' #all fields
+            fields = ('city', 'location')  # all fields in Map model
