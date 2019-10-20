@@ -147,4 +147,3 @@ STATIC_URL = '/static/'
 #LOGIN_REDIRECT_URL = '/' #change to appropriate map url
 #LOGOUT_REDIRECT_URL = '/' #change to appropriate map Url
 
-
