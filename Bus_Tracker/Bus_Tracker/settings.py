@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     # frontend apps
     'frontend',
-
+    'corsheaders',
     'rest_framework',
 
     # the main app
@@ -56,6 +56,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -141,3 +142,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# For accounts MAY need to be change for react
+#LOGIN_REDIRECT_URL = '/' #change to appropriate map url
+#LOGOUT_REDIRECT_URL = '/' #change to appropriate map Url
+
+
