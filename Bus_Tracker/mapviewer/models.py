@@ -1,11 +1,15 @@
 from django.contrib.gis.db import models
-from django.contrib.gis.geos import Point
+from django.contrib.gis.geos import Point # used with point creation
+from django.contrib.auth.models import User
 
 
 # Map module
 class map(models.Model):
     city = models.CharField(max_length=50, default='Denton, Tx') #city name
     location = models.PointField()
+
+    def _str_(self):
+        return self.title
 
 
 # Comment this out after you make a map. Will fix later
@@ -31,9 +35,13 @@ class Routes(models.Model):
     # Days of week
     # time array
     # stops on route
+    favorited = models.ForeignKey(User, on_delete=models.CASCADE, null=True) #if a favorite
 
 # For some reason migrations mess up with this. Will fix once I got the map centered.
 """class stops(models.Model):
     stop_id = models.IntegerField() #stop id
     stop_name = models.CharField(max_length=50) # stop name
     location = models.PointField() #location"""
+
+
+#user model?
