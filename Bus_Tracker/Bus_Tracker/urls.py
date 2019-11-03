@@ -23,6 +23,9 @@ from django.conf.urls import url
 router = routers.DefaultRouter()
 router.register(r'mapviewer', views.map_display, 'mapviewer')
 
+#This is added for the authentication
+router.register('notes', NoteViewSet, 'notes')
+
 urlpatterns = [
     path('', include('frontend.urls')),
     path('admin/', admin.site.urls),
