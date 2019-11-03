@@ -43,6 +43,8 @@ class Map extends React.Component {
                 console.log("test 2!")
             }
         }
+        const data =[{"name":"test1", "lat":33.209348, "lng": -97.136405},{"name":"test2", "lat":33.229348, "lng": -97.156405}];
+        const listItems = data.map((d) => <Marker color="red" key={d.name} lat={d.lat} lng={d.lng}>{d.name}</Marker>);
         return (
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact classname="map"
@@ -56,6 +58,7 @@ class Map extends React.Component {
                         name="My Marker"
                         color="blue"
                     />
+                    {listItems}
                 </GoogleMapReact>
           </div>
         );
