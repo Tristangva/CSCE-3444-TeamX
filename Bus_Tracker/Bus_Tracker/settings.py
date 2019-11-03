@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'frontend',
     'corsheaders',
     'rest_framework',
+    'knox',
 
     # the main app
     'mapviewer',
@@ -53,6 +54,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ]
+
+    'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',),
 }
 
 MIDDLEWARE = [
