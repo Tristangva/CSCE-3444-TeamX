@@ -1,5 +1,6 @@
 body {
     background: lightgray;
+    margin: 0;
 
     text-align: center;
     font-family: Geneva, Roboto, Arial, Verdana;
@@ -34,6 +35,11 @@ button:active {
     border: white solid 3px;
 }
 
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
 #RoutesButton {
     position: absolute;
     left: 275px;
@@ -59,4 +65,17 @@ button:active {
 
 #Sidebar-and-Button.slideout {
   margin-left: 0px;
+}
+
+.marker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    user-select: none;
+    transform: translate(-50%, -50%);
 }
