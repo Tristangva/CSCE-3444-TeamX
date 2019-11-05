@@ -1,49 +1,47 @@
+/*
+  using code from https://github.com/trekhleb/use-position
+ */
 import React from "react";
-import { geolocated } from "react-geolocated";
+import {useState, useEffect} from 'react';
 
-class location extends React.Component {
+const defaultSettings = {
+  enableHighAccuracy: false,
+  timeout: Infinity,
+  maximumAge: 0,
+};
 
-    render() {
-        return !this.props.isGeolocationAvailable ? (
-            <div>Your browser does not support Geolocation</div>
-        ) : !this.props.isGeolocationEnabled ? (
-            <div>Geolocation is not enabled</div>
-        ) : this.props.coords ? (
-            <table>
-                <tbody>
-                    <tr>
-                        <td>latitude</td>
-                        <td>{this.props.coords.latitude}</td>
-                    </tr>
-                    <tr>
-                        <td>longitude</td>
-                        <td>{this.props.coords.longitude}</td>
-                    </tr>
-                    <tr>
-                        <td>altitude</td>
-                        <td>{this.props.coords.altitude}</td>
-                    </tr>
-                    <tr>
-                        <td>heading</td>
-                        <td>{this.props.coords.heading}</td>
-                    </tr>
-                    <tr>
-                        <td>speed</td>
-                        <td>{this.props.coords.speed}</td>
-                    </tr>
-                </tbody>
-            </table>
-        ) : (
-            <div>Getting the location data&hellip; </div>
-        );
+export const userPosition = (watch = false, settings = defaultSettings) => {
+  const [position, setPosition] = useState({});
+  const [error, setError] = useState(null);
+
+  const onChange = ({coords}) => {
+    setPosition({
+      latitude: coords.latitude,
+      longitude: coords.longitude,
+      accuracy: coords.accuracy,
+    });
+  };
+
+  const onError = (error) => {
+    setError(error.message);
+  };
+
+  useEffect(() => {
+    const geo = navigator.geolocation;
+    if (!geo) {
+      setError('Geolocation is not supported');
+      return;
     }
 
-}
+    let watcher = null;
+    if (watch) {
+      watcher = geo.watchPosition(onChange, onError, settings);
+    } else {
+      geo.getCurrentPosition(onChange, onError, settings);
+    }
 
+    return () => watcher && geo.clearWatch(watcher);
+  }, [settings]);
 
-export default geolocated({
-    positionOptions: {
-        enableHighAccuracy: false,
-    },
-    userDecisionTimeout: 5000,
-})(Demo);
+  return {...position, error};
+};

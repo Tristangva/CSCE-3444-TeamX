@@ -8,6 +8,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.5",
     "bulma": "^0.7.5",
+    "google-map-react": "^1.1.5",
+    "google-maps-react": "^2.0.2",
     "reactbulma": "^3.0.4"
   },
   "devDependencies": {
