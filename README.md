@@ -9,16 +9,6 @@ Project Members:
 
 To run, ensure git and Python3.7+ is installed.
 
-Modules to install
-* Django
-* djangorestframework
-* Markdown
-* React
-* googlemaps
-* geos
-* PostGIS
-* 
-
 To install the python dependencies, run
 `pip install -r requirements.txt`
 
