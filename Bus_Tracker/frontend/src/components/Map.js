@@ -43,8 +43,12 @@ class Map extends React.Component {
                 console.log("test 2!")
             }
         }
-        const data =[{"name":"test1", "lat":33.209348, "lng": -97.136405},{"name":"test2", "lat":33.229348, "lng": -97.156405}];
-        const listItems = data.map((d) => <Marker color="red" key={d.name} lat={d.lat} lng={d.lng}>{d.name}</Marker>);
+        const data =[   {"name":"test1", "color":"red", "lat":33.209348, "lng": -97.136405},
+                        {"name":"test2", "color":"blue", "lat":33.229348, "lng": -97.156405},
+                        {"name":"test2", "color":"green", "lat":33.219349, "lng": -97.146406}];
+
+        const stops = data.map((d) => <Marker color={d.color} key={d.name} lat={d.lat} lng={d.lng}>{d.name}</Marker>);
+
         return (
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact classname="map"
@@ -52,13 +56,7 @@ class Map extends React.Component {
                   defaultCenter={this.props.center}
                   defaultZoom={this.props.zoom}
                 >
-                    <Marker id="testMarker"
-                        lat={33.219348}
-                        lng={-97.146405}
-                        name="My Marker"
-                        color="blue"
-                    />
-                    {listItems}
+                    {stops}
                 </GoogleMapReact>
           </div>
         );
