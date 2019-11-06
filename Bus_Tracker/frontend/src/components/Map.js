@@ -1,29 +1,19 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+import {userPosition} from "./UserPosition";
 
 class Map extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {
-          location: [
-              {lat: 32.219348, lng: -97.146405}
-          ]
-        };
-
-        this.UpdateMarkers = this.UpdateMarkers.bind(this)
+        const { latitude, longitude, accuracy, error } = userPosition(true);    //centered on the bus stop by the UNT union
+        const [center, setCenter] = useState({lat: 33.211073, lng: -97.146241});
+        const [zoom, setZoom] = useState(16);
   }
     static defaultProps = {
-    center: {
-      lat: 33.219348,
-      lng: -97.146405
-    },
+    const [center, setCenter] = useState({lat: 33.211073, lng: -97.146241});
     zoom: 16
   };
 
-    UpdateMarkers() {
-
-    }
     render(){
         const data =[   {"name": "2384098", "color":"green", "lat": 33.2147452, "lng":-97.1579706},
                         {"name": "2394646", "color":"green", "lat": 33.211193, "lng":-97.146198},
@@ -61,5 +51,5 @@ class Map extends React.Component {
         );
     }
 }
-
+}
 export default Map;
