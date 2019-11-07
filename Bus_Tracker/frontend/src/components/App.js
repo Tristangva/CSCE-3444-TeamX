@@ -5,12 +5,16 @@ import Map from "./Map";
 // import DataProvider from "./DataProvider";
 // import Table from "./Table";
 
+class App extends React.Component {
 
-const App = () => (
-    <div>
-        <RoutesSidebar/>
-        <Map/>
-    </div>
-);
+    render(){
+        return(
+            <div>
+                <RoutesSidebar/>
+                <Map/>
+            </div>
+        )
+    }
+}
 
 export default App;
