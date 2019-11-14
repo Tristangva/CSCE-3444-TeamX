@@ -19,12 +19,18 @@ from django.views.generic import RedirectView
 from rest_framework import routers
 from mapviewer import views # idk why this is red
 from django.conf.urls import url
+from django.contrib import admin
+from django.urls import path
+
+from .views import home
+
 
 router = routers.DefaultRouter()
 router.register(r'mapviewer', views.map_display, 'mapviewer')
 
 urlpatterns = [
     path('', include('frontend.urls')),
+    path('', home)
     path('admin/', admin.site.urls),
     path('account/', include('django.contrib.auth.urls')) # to view the accounts
 
