@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models
+from django.contrib.postgres.fields import ArrayField
 from django.contrib.gis.geos import Point # used with point creation
 from django.contrib.auth.models import User
 
@@ -9,7 +10,7 @@ class map(models.Model):
     location = models.PointField()
 
     def _str_(self):
-        return self.title
+        return self.city
 
 
 # Comment this out after you make a map. Will fix later
@@ -35,7 +36,9 @@ class Routes(models.Model):
     # Days of week
     # time array
     # stops on route
-    favorited = models.ForeignKey(User, on_delete=models.CASCADE, null=True) #if a favorite
+    #routeStops = ArrayField
+    def _str_(self):
+        return self.name
 
 # For some reason migrations mess up with this. Will fix once I got the map centered.
 """class stops(models.Model):
