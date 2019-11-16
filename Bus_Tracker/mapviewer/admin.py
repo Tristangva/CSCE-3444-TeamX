@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Bus, Routes, map
+from .models import *
 from leaflet.admin import LeafletGeoAdmin
 from django.contrib.gis.admin import OSMGeoAdmin
 
 # Register your models here.
 admin.site.register(Bus)
-admin.site.register(Routes),
+admin.site.register(Route),
 
 class mapAdmin(OSMGeoAdmin):
 
@@ -13,3 +13,4 @@ class mapAdmin(OSMGeoAdmin):
 
 
 admin.site.register(map, mapAdmin)
+admin.site.register(stop)

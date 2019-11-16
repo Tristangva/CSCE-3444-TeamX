@@ -69,7 +69,6 @@ class Map extends React.Component {
     };   //centered on the bus stop by the UNT union*/
     render(){
 
-        RoutesButton
             let stopData =[   {"name": "2384098", "color":"green", "lat": 33.2147452, "lng":-97.1579706},
                             {"name": "2394646", "color":"green", "lat": 33.211193, "lng":-97.146198},
                             {"name": "838961", "color":"green", "lat": 33.215695, "lng":-97.139411},

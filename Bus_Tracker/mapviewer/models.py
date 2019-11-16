@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models
+from polymorphic.models import PolymorphicModel
 from django.contrib.postgres.fields import ArrayField
 from django.contrib.gis.geos import Point # used with point creation
 from django.contrib.auth.models import User
@@ -28,23 +29,30 @@ class Bus(models.Model):
     status = models.CharField(max_length=30, choices=STATUS_CHOICES, default='In service')  # maintenance status
     # if it is being used right now
 
+
+# For some reason migrations mess up with this. Will fix once I got the map centered.
+class stop(models.Model):
+    #stop_id = models.IntegerField() #stop id
+    stop_name = models.CharField(max_length=50, default=None)  # stop name
+    latitude = models.FloatField(default=33.211073)
+    longitude = models.FloatField(default=-97.146241)
+
+
+
 # Class for the routes
-class Routes(models.Model):
-    route_id = models.CharField(primary_key=True, max_length=30)  # route id = key
-    name = models.CharField(max_length=30)  # name of route
-    color = models.CharField(max_length=30)  # color
+class Route(models.Model):
+    route_id = models.CharField(max_length=30, default=None)  # route id = key
+    name = models.CharField(max_length=30, default=None)  # name of route
+    color = models.CharField(max_length=30, default=None)  # color
     # Days of week
     # time array
     # stops on route
-    #routeStops = ArrayField
-    def _str_(self):
-        return self.name
+    stps = ArrayField(
+        ArrayField(
+            models.CharField(max_length=30)  # names of stops
+        )
+    )
 
-# For some reason migrations mess up with this. Will fix once I got the map centered.
-"""class stops(models.Model):
-    stop_id = models.IntegerField() #stop id
-    stop_name = models.CharField(max_length=50) # stop name
-    location = models.PointField() #location"""
 
 
 #user model?

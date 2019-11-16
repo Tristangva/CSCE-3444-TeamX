@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'frontend',
     'corsheaders',
     'rest_framework',
+    'polymorphic',
 
     # the main app
     'mapviewer',

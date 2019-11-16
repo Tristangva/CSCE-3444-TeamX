@@ -21,8 +21,14 @@ class MapViewSet(viewsets.ModelViewSet):
 
 
 class RoutesViewSet(viewsets.ModelViewSet):
-    queryset = map.objects.all()
+    queryset = Route.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = MapSerializer
+    serializer_class = RouteSerializer
+
+class StopViewSet(viewsets.ModelViewSet):
+    queryset = stop.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = StopSerializer
+
 
 
