@@ -69,7 +69,8 @@ class Map extends React.Component {
     };   //centered on the bus stop by the UNT union*/
     render(){
 
-            let stopData =[   {"name": "2384098", "color":"green", "lat": 33.2147452, "lng":-97.1579706},
+            let stopData = [];
+            /*let stopData =[   {"name": "2384098", "color":"green", "lat": 33.2147452, "lng":-97.1579706},
                             {"name": "2394646", "color":"green", "lat": 33.211193, "lng":-97.146198},
                             {"name": "838961", "color":"green", "lat": 33.215695, "lng":-97.139411},
                             {"name": "838962", "color":"green", "lat": 33.21570111, "lng":-97.14362844},
@@ -88,7 +89,7 @@ class Map extends React.Component {
                             {"name": "839372", "color":"green", "lat": 33.213860803, "lng":-97.155108642},
                             {"name": "839373", "color":"green", "lat": 33.211860803, "lng":-97.155152642},
                             {"name": "839387", "color":"green", "lat": 33.253467, "lng":-97.153912},
-                            {"name": "839397", "color":"green", "lat": 33.210993729, "lng":-97.146209593}];
+                            {"name": "839397", "color":"green", "lat": 33.210993729, "lng":-97.146209593}];*/
 
         let stops = stopData.map((d) => <Marker color={d.color} key={d.name} lat={d.lat} lng={d.lng}>{d.name}</Marker>);
         //var { latitude, longitude, accuracy, error } = userPosition(true);    //centered on the bus stop by the UNT union

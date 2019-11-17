@@ -32,11 +32,9 @@ class Bus(models.Model):
 
 # For some reason migrations mess up with this. Will fix once I got the map centered.
 class stop(models.Model):
-    #stop_id = models.IntegerField() #stop id
     stop_name = models.CharField(max_length=50, default=None)  # stop name
     latitude = models.FloatField(default=33.211073)
     longitude = models.FloatField(default=-97.146241)
-
 
 
 # Class for the routes
