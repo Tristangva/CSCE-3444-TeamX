@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework.response import Response
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from rest_framework import status
 from rest_framework.decorators import api_view
 
@@ -21,3 +21,6 @@ class route_display(viewsets.ModelViewSet):
     queryset = map.objects.all()
 
 
+class stop_display(viewsets.ModelViewSet):
+    queryset = stop.objects.all()
+    serializer_class = StopSerializer

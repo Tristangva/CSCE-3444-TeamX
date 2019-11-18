@@ -6,6 +6,8 @@ from . import views
 
 routers = routers.DefaultRouter()
 routers.register('api.Bus', BusViewSets, 'Bus')
+routers.register(r'mapviewer', views.stop_display, 'mapviewer')
+routers.register(r'mapviewer', views.route_display, 'mapviewer')
 
 urlpatterns = routers.urls
 
