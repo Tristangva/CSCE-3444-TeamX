@@ -39,7 +39,7 @@ class stop(models.Model):
 
 # Class for the routes
 class Route(models.Model):
-    route_id = models.CharField(max_length=30, default=None)  # route id = key
+    id = models.CharField(primary_key=True, max_length=30, default=None)  # route id = key
     name = models.CharField(max_length=30, default=None)  # name of route
     color = models.CharField(max_length=30, default=None)  # color
     # Days of week
@@ -47,7 +47,7 @@ class Route(models.Model):
     # stops on route
     stps = ArrayField(
         ArrayField(
-            models.CharField(max_length=30)  # names of stops
+            models.TextField(max_length=300)  # names of stops
         )
     )
 
