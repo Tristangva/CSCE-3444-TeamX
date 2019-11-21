@@ -10,18 +10,18 @@ class BusSerializer(serializers.ModelSerializer):
 
 
 class MapSerializer(serializers.ModelSerializer):
-        class meta:
+        class Meta:
             model = map
             fields = ('city', 'location')  # all fields in Map model
 
 
 class RouteSerializer(serializers.ModelSerializer):
-        class meta:
+        class Meta:
             model = Route
-            fields = ('route_id', 'name', 'color') # fields
+            fields = ('id', 'name', 'color', 'stps')  # fields
 
 
 class StopSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model = stop
-        fields = ('stop_id', 'stop_name', 'latitude', 'longitude')
+        fields = ('stop_name', 'latitude', 'longitude')
