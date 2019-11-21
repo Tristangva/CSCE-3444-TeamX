@@ -16,7 +16,7 @@ class map_display(viewsets.ModelViewSet):  # display map made from either defaul
 
 class route_display(viewsets.ModelViewSet):
     serializer_class = RouteSerializer
-    queryset = map.objects.all()
+    queryset = Route.objects.all()
 
 
 class stop_display(viewsets.ModelViewSet):

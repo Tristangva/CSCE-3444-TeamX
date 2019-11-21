@@ -18,7 +18,7 @@ class MapSerializer(serializers.ModelSerializer):
 class RouteSerializer(serializers.ModelSerializer):
         class Meta:
             model = Route
-            fields = ('route_id', 'name', 'color', 'stps')  # fields
+            fields = ('id', 'name', 'color', 'stps')  # fields
 
 
 class StopSerializer(serializers.ModelSerializer):
