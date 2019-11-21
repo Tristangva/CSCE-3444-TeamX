@@ -21,11 +21,15 @@ from mapviewer import views # idk why this is red
 from django.conf.urls import url
 
 router = routers.DefaultRouter()
-router.register(r'mapviewer', views.map_display, 'mapviewer')
+router.register(r'maps', views.map_display, 'map')
+router.register(r'stops', views.stop_display, 'stop')
+router.register(r'routes', views.route_display, 'route')
+#router.register(r'mapviewer')
 
 urlpatterns = [
     path('', include('frontend.urls')),
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
     path('account/', include('django.contrib.auth.urls')) # to view the accounts
 
 ]

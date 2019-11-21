@@ -30,7 +30,7 @@ class Bus(models.Model):
     # if it is being used right now
 
 
-# For some reason migrations mess up with this. Will fix once I got the map centered.
+# Name, and lat / long for code
 class stop(models.Model):
     stop_name = models.CharField(max_length=50, default=None)  # stop name
     latitude = models.FloatField(default=33.211073)
@@ -44,6 +44,7 @@ class Route(models.Model):
     color = models.CharField(max_length=30, default=None)  # color
     # Days of week
     # time array
+
     # stops on route
     stps = ArrayField(
         ArrayField(

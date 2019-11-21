@@ -16,7 +16,7 @@ class Map extends React.Component {
               lng:""
           },
             //mapviewer: [],
-            stopData :[ /*{"name": "2384098", "color":"green", "lat": 33.2147452, "lng":-97.1579706},
+            stopData: [ /*{"name": "2384098", "color":"green", "lat": 33.2147452, "lng":-97.1579706},
                             {"name": "2394646", "color":"green", "lat": 33.211193, "lng":-97.146198},
                             {"name": "838961", "color":"green", "lat": 33.215695, "lng":-97.139411},
                             {"name": "838962", "color":"green", "lat": 33.21570111, "lng":-97.14362844},

@@ -3,8 +3,6 @@ from rest_framework.response import Response
 from rest_framework import viewsets, permissions
 from rest_framework import status
 from rest_framework.decorators import api_view
-
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import map
 
 from .serializer import *
