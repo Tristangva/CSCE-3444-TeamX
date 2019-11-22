@@ -4,13 +4,13 @@
 import React from "react";
 import {useState, useEffect} from 'react';
 
-const defaultSettings = {
+const LocationDefaultSettings = {
   enableHighAccuracy: false,
   timeout: Infinity,
   maximumAge: 0,
 };
 
-export const userPosition = (watch = false, settings = defaultSettings) => {
+userPosition = (watch = false, settings = LocationDefaultSettings) => {
   const [position, setPosition] = useState({});
   const [error, setError] = useState(null);
 

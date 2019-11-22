@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Bus, Routes, map
+from .models import *
 
 
 #bus serializer
@@ -10,6 +10,18 @@ class BusSerializer(serializers.ModelSerializer):
 
 
 class MapSerializer(serializers.ModelSerializer):
-        class meta:
+        class Meta:
             model = map
             fields = ('city', 'location')  # all fields in Map model
+
+
+class RouteSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = Route
+            fields = ('id', 'name', 'color', 'stps')  # fields
+
+
+class StopSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = stop
+        fields = ('stop_name', 'latitude', 'longitude')
