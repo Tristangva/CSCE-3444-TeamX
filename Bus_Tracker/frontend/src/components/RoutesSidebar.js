@@ -12,6 +12,7 @@ class RoutesSidebar extends React.Component {
                 </div>
                 <div>
                     <Click_Route/>
+                    <Click_Route/>
                 </div>
             </div>
         );
