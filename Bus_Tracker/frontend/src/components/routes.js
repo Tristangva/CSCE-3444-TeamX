@@ -4,9 +4,6 @@ import GoogleMapReact from 'google-map-react';
 
 //For each route, the name will be clickible
 
-// testing
-const stops = ["first stop", "second stop", "third stop"];
-
 class Click_Route extends React.Component {
     constructor () {
         super()
@@ -24,9 +21,9 @@ class Click_Route extends React.Component {
             //button should have text change for each route
             <div>
                 <button onClick={this.toggleHidden.bind(this)} >
-                  Discovery Park
+                    {this.props.routeName}
                 </button>
-                {this.state.isHidden && <RouteList stops={stops}/>}
+                {this.state.isHidden && <RouteList stops={this.props.stops}/>}
             </div>
         )
     }

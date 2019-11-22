@@ -11,8 +11,8 @@ class RoutesSidebar extends React.Component {
                     <h1>List of Routes</h1>
                 </div>
                 <div>
-                    <Click_Route/>
-                    <Click_Route/>
+                    <Click_Route routeName="Discovery Park" stops={["test"]}/>
+                    <Click_Route routeName="Some Route" stops={["stop1", "stop2"]}/>
                 </div>
             </div>
         );
