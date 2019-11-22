@@ -20,7 +20,7 @@ class Click_Route extends React.Component {
         return(
             //button should have text change for each route
             <div>
-                <button onClick={this.toggleHidden.bind(this)} >
+                <button className="RouteTitle" onClick={this.toggleHidden.bind(this)} >
                     {this.props.routeName}
                 </button>
                 {this.state.isHidden && <RouteList stops={this.props.stops}/>}
