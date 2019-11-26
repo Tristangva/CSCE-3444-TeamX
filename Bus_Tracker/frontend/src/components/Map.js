@@ -5,6 +5,8 @@ import Click_Route from './routes';
 import RoutesSidebar from './RoutesSidebar';
 import Marker from './Marker';
 import RoutesButton from './RoutesButton';
+import axios from "axios";
+
 
 class Map extends React.Component {
     constructor(props) {
@@ -12,10 +14,10 @@ class Map extends React.Component {
         this.state = {
           stopTemp: {
               stop_name:"",
+              color:"",
               lat:"",
               lng:""
           },
-            //mapviewer: [],
             stopData: [ /*{"name": "2384098", "color":"green", "lat": 33.2147452, "lng":-97.1579706},
                             {"name": "2394646", "color":"green", "lat": 33.211193, "lng":-97.146198},
                             {"name": "838961", "color":"green", "lat": 33.215695, "lng":-97.139411},
@@ -49,6 +51,23 @@ class Map extends React.Component {
             //centerAroundCurrentLocation: false,
             zoom: 16
       };
+    componentDidMount() {
+        this.stopList();
+        this.routeList()
+      }
+    stopList = () => {
+        axios
+          .get("/api/stops/")
+          .then(res => this.setState({ stopData: res.data }))
+          .catch(err => console.log(err));
+      };
+
+    routeList = () => {
+         axios
+          .get("/api/routes/")
+          .then(res => this.setState({ routeData: res.data }))
+          .catch(err => console.log(err));
+    };
 
     UpdateMarkers() {
 
@@ -95,7 +114,7 @@ class Map extends React.Component {
 
     render(){
 
-        const stops = this.state.stopData.map((d) => <Marker color={d.color} key={d.name} lat={d.lat} lng={d.lng}>{d.name}</Marker>);
+        const stops = this.state.stopData.map((d) => <Marker color={d.color} key={d.stop_name} lat={d.latitude} lng={d.longitude}>{d.stop_name}</Marker>);
         //var { latitude, longitude, accuracy, error } = userPosition(true);    //centered on the bus stop by the UNT union
 
         return (
