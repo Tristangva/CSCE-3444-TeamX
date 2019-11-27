@@ -114,7 +114,7 @@ class Map extends React.Component {
 
     render(){
 
-        const stops = this.state.stopData.map((d) => <Marker color={d.color} key={d.stop_name} lat={d.latitude} lng={d.longitude}>{d.stop_name}</Marker>);
+        let stops = this.state.stopData.map((d) => <Marker color={d.color} key={d.stop_name} lat={d.latitude} lng={d.longitude}>{d.stop_name}</Marker>);
         //var { latitude, longitude, accuracy, error } = userPosition(true);    //centered on the bus stop by the UNT union
 
         return (
