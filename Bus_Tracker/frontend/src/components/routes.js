@@ -2,7 +2,6 @@ import React from 'react';
 import RouteList from './RouteList'
 import GoogleMapReact from 'google-map-react';
 
-//For each route, the name will be clickible
 
 class Click_Route extends React.Component {
     constructor () {
@@ -18,7 +17,6 @@ class Click_Route extends React.Component {
       }
     render() {
         return(
-            //button should have text change for each route
             <div>
                 <button className="RouteTitle" onClick={this.toggleHidden.bind(this)} >
                     {this.props.routeName}

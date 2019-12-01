@@ -2,6 +2,7 @@ import React from 'react';
 import RoutesButton from "./RoutesButton"
 import Click_Route from "./routes.js"
 import axios from "axios";
+//import RouteProvider from "Providers";
 
 class RoutesSidebar extends React.Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class RoutesSidebar extends React.Component {
     componentDidMount() {
         this.routeList()
       }
+      //fetches JSON data
       routeList = () => {
          axios
           .get("/api/routes/")
@@ -26,8 +28,8 @@ class RoutesSidebar extends React.Component {
           .catch(err => console.log(err));
     };
     render(){
-
-        let routeButton = this.state.routeData.map((r) => <Click_Route routeName={r.name} stops={r.stps}>{r.name}</Click_Route>);
+        //template for each route button
+        let routeButton = this.state.routeData.map((r) => <Click_Route key={r.id} routeName={r.name} stops={r.stps}>{r.name}</Click_Route>);
 
         return (
             <div id="Sidebar-and-Button">
