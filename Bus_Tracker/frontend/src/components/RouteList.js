@@ -1,9 +1,9 @@
 import React from 'react';
 
 const RouteList = (props) => {
-    const stops = props.stops;
-    const listItems = stops.map((stop) =>
-    <div className='stopTile' key={stop.toString()}>
+    let stops = props.stops;
+    let listItems = stops.map((stop) =>
+    <div key={stop.toString()}>
       {stop}
     </div>
     );
