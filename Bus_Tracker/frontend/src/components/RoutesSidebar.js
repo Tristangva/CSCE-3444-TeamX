@@ -1,9 +1,36 @@
 import React from 'react';
 import RoutesButton from "./RoutesButton"
 import Click_Route from "./routes.js"
+import axios from "axios";
+//import RouteProvider from "Providers";
 
 class RoutesSidebar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            routeTemp: {
+                name: "",
+                color: "",
+                stps: "",
+            },
+            routeData: []
+        };
+        //this.UpdateMarkers = this.UpdateMarkers.bind(this)
+    }
+    componentDidMount() {
+        this.routeList()
+      }
+      //fetches JSON data
+      routeList = () => {
+         axios
+          .get("/api/routes/")
+          .then(res => this.setState({ routeData: res.data }))
+          .catch(err => console.log(err));
+    };
     render(){
+        //template for each route button
+        let routeButton = this.state.routeData.map((r) => <Click_Route key={r.id} routeName={r.name} stops={r.stps}>{r.name}</Click_Route>);
+
         return (
             <div id="Sidebar-and-Button">
                 <RoutesButton/>
@@ -12,15 +39,8 @@ class RoutesSidebar extends React.Component {
                         List of Routes
                     </div>
                     <div id="RouteList" className="Scrollable">
-                        <Click_Route routeName="Discovery Park" stops={["dp stop1", "dp stop2", "dp stop3"]}/>
-                        <Click_Route routeName="Discovery Park" stops={["dp stop1", "dp stop2", "dp stop3"]}/>
-                        <Click_Route routeName="Discovery Park" stops={["dp stop1", "dp stop2", "dp stop3"]}/>
-                        <Click_Route routeName="Discovery Park" stops={["dp stop1", "dp stop2", "dp stop3"]}/>
-                        <Click_Route routeName="Discovery Park" stops={["dp stop1", "dp stop2", "dp stop3"]}/>
-                        <Click_Route routeName="Some Route" stops={["stop1", "stop2"]}/>
-                        <Click_Route routeName="Some Route" stops={["stop1", "stop2"]}/>
-                        <Click_Route routeName="Some Route" stops={["stop1", "stop2"]}/>
-                        <Click_Route routeName="Some Route" stops={["stop1", "stop2"]}/>
+                        {routeButton}
+
                     </div>
                 </div>
             </div>

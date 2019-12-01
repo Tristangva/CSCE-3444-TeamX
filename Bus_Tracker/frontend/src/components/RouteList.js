@@ -1,8 +1,8 @@
 import React from 'react';
 
-const RouteList = (props) => {
-    const stops = props.stops;
-    const listItems = stops.map((stop) =>
+let RouteList = (props) => {
+    let stops = props.stops;
+    let listItems = stops.map((stop) =>
     <li key={stop.toString()}>
       {stop}
     </li>
