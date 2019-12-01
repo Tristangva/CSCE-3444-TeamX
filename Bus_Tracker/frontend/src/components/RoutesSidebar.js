@@ -40,7 +40,6 @@ class RoutesSidebar extends React.Component {
                     </div>
                     <div id="RouteList" className="Scrollable">
                         {routeButton}
-
                     </div>
                 </div>
             </div>
