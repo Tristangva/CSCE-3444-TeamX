@@ -3,12 +3,12 @@ import React from 'react';
 const RouteList = (props) => {
     const stops = props.stops;
     const listItems = stops.map((stop) =>
-    <li key={stop.toString()}>
+    <div className='stopTile' key={stop.toString()}>
       {stop}
-    </li>
+    </div>
     );
     return (
-      <ul>{listItems}</ul>
+        <div> {listItems} </div>
     );
   };
 

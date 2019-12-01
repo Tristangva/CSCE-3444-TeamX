@@ -63,6 +63,7 @@ button:active {
     /*Same as height listed above in this class*/
     line-height: 50px;
 
+    background-color: green;
 }
 
 #Sidebar-and-Button {
@@ -78,7 +79,7 @@ button:active {
     height:100vh;
     width: 250px;
 
-    background-color: green;
+    background-color: white;
     outline: 3px solid white;
 }
 
@@ -101,20 +102,18 @@ button:active {
 
 #RouteList {
     flex-grow: 1;
-    padding: 0 5px 5px 5px;
-
-    background-color: darkgreen;
 }
+
 .RouteTitle {
     width: 100%;
     height: 50px;
-    margin: 5px 0 0 0;
+    margin: 0 0 0 0;
     padding: 15px 32px;
-    border-radius: 5px;
+    border: 0;
+    /*border-radius: 5px;*/
+    /*border: white solid 1px;*/
 
     color: white;
-    border: white solid 1px;
-
 
     font-size: 16px;
 }
@@ -138,4 +137,12 @@ button:active {
 .Scrollable::-webkit-scrollbar-thumb
 {
 	background-color: green;
+}
+
+.stopTile {
+    padding: 0 40px;
+    /*background-color: indianred;*/
+
+    color: black;
+    text-align: left;
 }
