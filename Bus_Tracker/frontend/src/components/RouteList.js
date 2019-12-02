@@ -8,7 +8,7 @@ const RouteList = (props) => {
     </div>
     );
     return (
-        <div> {listItems} </div>
+        <div className="stopTile"> {listItems} </div>
     );
   };
 
